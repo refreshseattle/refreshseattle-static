@@ -34,4 +34,7 @@ RefreshSeattle::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Rails Admin mailer
+  config.action_mailer.default_url_options = { :host => 'refresh_seattle.dev' }
 end

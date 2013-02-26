@@ -1,4 +1,13 @@
 RefreshSeattle::Application.routes.draw do
+  
+
+  resources :homes
+
+
+  devise_for :users
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   match '/auth/:provider/callback', :to => 'sessions#callback'
 
   # The priority is based upon order of creation:
@@ -50,7 +59,7 @@ RefreshSeattle::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
