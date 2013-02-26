@@ -1,6 +1,12 @@
 RefreshSeattle::Application.routes.draw do
   
 
+  resources :speakers
+
+
+  resources :events
+
+
   resources :homes
 
 
