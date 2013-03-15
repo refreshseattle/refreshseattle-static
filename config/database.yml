@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: refresh_seattle_test
   pool: 5
-  username: refresh_seattle
+  username: postgres
   password:
 
 production:
