@@ -12,8 +12,9 @@ gem 'pg'
 # in production environments by default.
 group :assets do
   gem 'sass-rails'
+  gem 'compass-rails'
   gem 'coffee-rails'
-  gem 'zurb-foundation', '~> 4.0.7'
+  gem 'zurb-foundation', '~> 4.0.9'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
