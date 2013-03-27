@@ -16,7 +16,7 @@
 <html lang="en">
 <[endif]-->
   <head>
-    <title><%= content_for?(:title) ? yield(:yield) : 'Untitled' %></title>
+    <title><%= content_for?(:title) ? "#{yield(:title)} | " : '' %>Refresh Seattle</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1,21 +1,18 @@
-<h1>Listing events</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<% content_for :title do %>
+Events
+<% end %>
+<div class="row">
+  <h1 class="large-12 columns">Events</h1>
+</div>
 
 <% @events.each do |event| %>
-  <tr>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="row">
+  <div class="large-2 columns">
+    <%= event.event_date %> 
+  </div>
+  <div class="large-10 columns">
+    <h2><%= link_to event.title, event_path(event) %></h2>
+    <p><%= raw event.summary %></p>
+  </div>
+</div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Event', new_event_path %>
